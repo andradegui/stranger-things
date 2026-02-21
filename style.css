@@ -13,6 +13,7 @@ body {
     background-color: #0C0102;
     color: rgb(255, 255, 255, 0.9);
     font-family: "Poppins";
+    overflow-x: hidden;
 }
 
 button {
@@ -31,25 +32,61 @@ header {
     /* background-color: green; */
 }
 
+section {
+    width: 100%;
+    display: flex;
+    padding: 7vw;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+button {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    gap: 12px;
+    border: none;
+    outline: none;
+    padding: 16px 0px;
+    border-bottom: 1px solid white;
+
+}
+
+.bgMonstro {
+    background-image: url("assets/bg-sec2.webp");
+    background-size: cover;
+    /* background-position: center; */
+    background-position: 50% 0%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
 .hero {
     background-image: url("assets/hero.webp");
     background-position: 50% 0%;
     background-size: cover;
-    width: 100%;
-    height: 100vh;
     /*view height*/
-    display: flex;
-    align-items: center;
+    height: 100vh;
     /*posiciona vertical*/
-    justify-content: space-between;
+    align-items: center;
     /*posiciona horizontal*/
+    justify-content: space-between;
     padding: 0vw 7vw 7vw 7vw;
 
-    .esquerda {
-
-        /* background-color: blue; */
-
+    .esquerda .direita {
         width: 30%;
+    }
+
+    .esquerda {
+        /* background-color: blue; */
 
         h3 {
             font-size: 24px;
@@ -68,30 +105,193 @@ header {
 
         /* background-color: blue; */
 
-        display: flex; /*Um elemento fica ao lado do outro*/
-        flex-direction: column; /*Elementos um abaixo do outro*/
-        align-items: end;          
+        display: flex;
+        /*Um elemento fica ao lado do outro*/
+        flex-direction: column;
+        /*Elementos um abaixo do outro*/
+        align-items: end;
 
-        width: 30%;
-
-        p{
+        p {
             font-size: 2vw;
             margin-bottom: 32px;
-            text-align: end;            
+            text-align: end;
         }
 
-        button{
-            background-color: transparent;
-            color: white;
-            font-size: 16px;
+    }
+
+}
+
+.secaoCidade {
+    flex-direction: column;
+
+    .titulo {
+        /* background-color: blue; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .cards {
+        /* background-color: blue; */
+        margin-top: 52px;
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            /* background-color: blue; */
+            background-image: url(assets/card1.webp);
+            width: 32%;
+            aspect-ratio: 16/9;
+            /*definindo o tamanho da largura p/ responsividade*/
+            background-size: cover;
+            background-position: center;
             display: flex;
-            gap: 12px;
-            border: none;
-            outline: none;
-            padding: 16px 0px;
-            border-bottom: 1px solid white;
+            align-items: end;
+            justify-content: space-between;
+            padding: 14px;
+
+            h3,
+            p {
+                font-weight: 450;
+                font-size: 1.1vw;
+            }
 
         }
+
+        .card:nth-child(2) {
+            background-image: url(assets/card2.webp);
+        }
+
+        .card:nth-child(3) {
+            background-image: url(assets/card3.webp);
+        }
+    }
+
+}
+
+.secaoDepoimentos {
+    flex-direction: column;
+
+    .logotipos {
+        /* background-color: blue; */
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .depoimentos {
+        margin-top: 62px;
+        display: flex;
+        justify-content: space-between;
+
+        .depoimento {
+            width: 31%;
+        }
+    }
+}
+
+.secaoObrigado {
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+footer {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("assets/bg-footer.webp");
+    background-size: cover;
+    background-position: center;
+    /* background-position: 50% 0%; */
+
+
+    .conteudoFooter {
+        display: flex;
+        width: 100%;
+        padding: 7vw;
+
+        .logoFooter {
+            width: 30%;
+
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 4px;
+            }
+
+            h2 {
+                font-size: 3.7vw;
+                font-family: "Benguiat";
+            }
+        }
+
+        .secoesFooter {
+            display: flex;
+            /* background-color: blue; */
+            /* Pega a largura total disponível */
+            flex: 1;
+            justify-content: end;
+            gap: 6%;
+            align-items: end;
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+
+            .social {
+
+                ul {
+                    display: flex;
+                    gap: 12%;
+                }
+            }
+
+        }
+    }
+
+    .logotiposFooter {
+        width: 100%;
+        /* background-color: blue; */
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4vw;
+    }
+
+    .textoInfinito {
+        width: max-content;
+        display: flex;
+
+        h3 {
+            color: rgb(189, 188, 188);
+            font-size: 12vw;
+            font-family: "Benguiat", sans-serif;
+            mix-blend-mode: color-dodge;
+            animation: textoInfinito 11s infinite linear;
+            padding-left: 8vw;
+        }
+    }
+
+}
+
+@keyframes textoInfinito {
+
+    100% {
+        transform: translateX(-100%);
     }
 
 }
