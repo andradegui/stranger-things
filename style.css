@@ -9,11 +9,15 @@
     src: url(/fonts/Benguiat\ Bold.ttf);
 }
 
+html,
+body {
+    overflow-x: hidden !important;
+}
+
 body {
     background-color: #0C0102;
     color: rgb(255, 255, 255, 0.9);
     font-family: "Poppins";
-    overflow-x: hidden;
 }
 
 button {
@@ -257,7 +261,7 @@ footer {
 
                 ul {
                     display: flex;
-                    gap: 12%;
+                    gap: 12px;
                 }
             }
 
@@ -300,11 +304,104 @@ footer {
 
 @media (max-width: 1500px) {
 
+    .hero {
+
+        flex-direction: column;
+        padding: 10% 4vw 0;
+
+        .esquerda .direita {
+            width: 100%;
+        }
+
+        .esquerda {
+
+            h3,
+            h1 {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 4vw;
+            }
+        }
+
+        .direita {
+            align-items: start;
+
+            p {
+                font-size: 4vw;
+                text-align: start;
+                margin-bottom: 16px;
+            }
+        }
+
+    }
+
     .secaoCidade .cards .card {
         /* display: none; */
         flex-direction: column;
         align-items: start;
         justify-content: end;
+    }
+
+    footer {
+
+        padding-top: 40px;
+
+        .conteudoFooter {
+
+            padding: 4vw;
+            flex-direction: column;
+
+            .logoFooter {
+                width: 100%;
+
+                h2,
+                h3 {
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 6vw;
+                }
+            }
+
+            .secoesFooter {
+
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: start;            
+
+                .social {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 40px 0px 32px;
+
+                    ul {
+                        gap: 8vw;
+                    }
+                }
+
+                .institucional, .parceiro {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                }
+
+                .parceiro {
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
     }
 
 }
@@ -345,11 +442,11 @@ footer {
         }
 
         .direita {
-            align-items: center;
+            align-items: start;
 
             p {
                 font-size: 5.5vw;
-                text-align: center;
+                text-align: start;
                 margin-bottom: 16px;
             }
         }
@@ -367,36 +464,124 @@ footer {
             font-size: 6vw;
         }
 
-        .cards{
+        .cards {
             margin-top: 20px;
             flex-direction: column;
             gap: 20px;
 
-            .card{
+            .card {
                 width: 100%;
             }
         }
     }
 
-    .secaoDepoimentos{
-        .logotipos{
-            img:nth-child(1), img:nth-child(3){
+    .secaoDepoimentos {
+        .logotipos {
+
+            img:nth-child(1),
+            img:nth-child(3) {
                 width: 20%;
             }
 
-             img:nth-child(2){
+            img:nth-child(2) {
                 width: 40%;
             }
         }
 
-        .depoimentos{
+        .depoimentos {
             flex-direction: column;
             gap: 48px;
 
-            .depoimento{
+            .depoimento {
                 width: 100%;
             }
         }
 
     }
+
+    .secaoObrigado {
+
+        /* superior, laterais, inferior */
+        margin: 40px 0px 60px;
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            width: max-content;
+            gap: 28px;
+            animation: textoCidades 16s infinite linear;
+        }
+
+
+    }
+
+    footer {
+
+        padding-top: 40px;
+
+        .conteudoFooter {
+
+            padding: 4vw;
+            flex-direction: column;
+
+            .logoFooter {
+                width: 100%;
+
+                h2,
+                h3 {
+                    text-align: center;
+                }
+
+                h2 {
+                    font-size: 12vw;
+                }
+            }
+
+            .secoesFooter {
+
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: start;
+
+                .social {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 40px 0px 32px;
+
+                    ul {
+                        gap: 8vw;
+                    }
+                }
+
+                .institucional {
+                    width: 40%;
+                }
+
+                .parceiro {
+                    /* background-color: blue; */
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
+
+@keyframes textoCidades {
+
+    100% {
+        transform: translateX(-100%);
+    }
+
 }
