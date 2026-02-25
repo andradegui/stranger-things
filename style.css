@@ -22,7 +22,7 @@ body {
 
 button {
     font-family: "Poppins", sans-serif;
-
+    cursor: pointer;
 }
 
 header {
@@ -74,7 +74,7 @@ ul {
 
 
 .hero {
-    background-image: url("assets/hero.webp");
+    /* background-image: url("assets/hero.webp"); */
     background-position: 50% 0%;
     background-size: cover;
     /*view height*/
@@ -83,10 +83,30 @@ ul {
     align-items: center;
     /*posiciona horizontal*/
     justify-content: space-between;
-    padding: 0vw 7vw 7vw 7vw;
+    padding: 0 7vw 7vw 7vw;
+    /* Se torna referência para as divs filhas */
+    position: relative;
 
-    .esquerda .direita {
+    picture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    .esquerda,
+    .direita {
         width: 30%;
+        z-index: 3;
     }
 
     .esquerda {
@@ -125,6 +145,18 @@ ul {
 
 }
 
+.hero:before {
+    content: "";
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
 .secaoCidade {
     flex-direction: column;
 
@@ -159,11 +191,11 @@ ul {
             justify-content: space-between;
             padding: 14px;
 
-            /* h3,
+            h3,
             p {
-                font-weight: 450;
+                font-weight: 500;
                 font-size: 1.1vw;
-            } */
+            }
 
         }
 
@@ -302,14 +334,15 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1500px) {
+@media (max-width: 900px) {
 
     .hero {
 
         flex-direction: column;
         padding: 10% 4vw 0;
 
-        .esquerda .direita {
+        .esquerda,
+        .direita {
             width: 100%;
         }
 
@@ -321,7 +354,12 @@ footer {
             }
 
             h1 {
+                font-size: 8vw;
+            }
+            
+            h3{
                 font-size: 4vw;
+                
             }
         }
 
@@ -337,11 +375,63 @@ footer {
 
     }
 
+    .secaoCidade {
+        button {
+            display: none;
+        }
+    }
+
     .secaoCidade .cards .card {
         /* display: none; */
         flex-direction: column;
         align-items: start;
         justify-content: end;
+    }
+
+    .secaoCidade {
+        margin-top: 80px;
+
+        button {
+            display: none;
+        }
+
+        h2 {
+            font-size: 6vw;
+        }
+
+        .cards {
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 20px;
+
+            .card {
+                width: 100%;
+
+                h3,
+                p {
+                    font-weight: 500;
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+
+    .secaoObrigado {
+
+        /* superior, laterais, inferior */
+        margin: 40px 0px 60px;
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            width: max-content;
+            gap: 28px;
+            animation: textoCidades 16s infinite linear;
+        }
+
+
     }
 
     footer {
@@ -370,7 +460,7 @@ footer {
 
                 flex-wrap: wrap;
                 justify-content: center;
-                align-items: start;            
+                align-items: start;
 
                 .social {
                     width: 100%;
@@ -385,7 +475,8 @@ footer {
                     }
                 }
 
-                .institucional, .parceiro {
+                .institucional,
+                .parceiro {
                     width: 40%;
                     display: flex;
                     justify-content: center;
@@ -425,7 +516,8 @@ footer {
         flex-direction: column;
         padding: 26% 4vw 0;
 
-        .esquerda .direita {
+        .esquerda,
+        .direita {
             width: 100%;
         }
 
@@ -471,6 +563,12 @@ footer {
 
             .card {
                 width: 100%;
+
+                h3,
+                p {
+                    font-weight: 500;
+                    font-size: 4vw;
+                }
             }
         }
     }
@@ -573,7 +671,13 @@ footer {
             }
         }
 
+        .logotiposFooter {
+            margin-top: 40px;
+        }
 
+        .textoInfinito h3 {
+            font-size: 20vw;
+        }
 
     }
 }
