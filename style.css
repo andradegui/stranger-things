@@ -66,6 +66,9 @@ button {
     background-size: cover;
     /* background-position: center; */
     background-position: 50% 0%;
+    position: relative;
+    z-index: 2;
+    background-color: #0C0102;
 }
 
 ul {
@@ -159,6 +162,7 @@ ul {
 
 .secaoCidade {
     flex-direction: column;
+    position: relative;
 
     .titulo {
         /* background-color: blue; */
