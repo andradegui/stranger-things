@@ -1,695 +1,661 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Benguiat";
-    src: url(/fonts/Benguiat\ Bold.ttf);
+  font-family: "Benguiat";
+  src: url(/fonts/Benguiat\ Bold.ttf);
 }
 
 html,
 body {
-    overflow-x: hidden !important;
+  overflow-x: hidden !important;
 }
 
 body {
-    background-color: #0C0102;
-    color: rgb(255, 255, 255, 0.9);
-    font-family: "Poppins";
+  background-color: #0c0102;
+  color: rgb(255, 255, 255, 0.9);
+  font-family: "Poppins";
 }
 
 button {
-    font-family: "Poppins", sans-serif;
-    cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 
 header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 4vw;
-    /*view width*/
-    position: absolute;
-    z-index: 9;
-    /* background-color: green; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  /*view width*/
+  position: absolute;
+  z-index: 9;
+  /* background-color: green; */
 }
 
 section {
-    width: 100%;
-    display: flex;
-    padding: 7vw;
+  width: 100%;
+  display: flex;
+  padding: 7vw;
 }
 
 h2 {
-    font-size: 40px;
-    font-weight: 500;
+  font-size: 40px;
+  font-weight: 500;
 }
 
-
 button {
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-    display: flex;
-    gap: 12px;
-    border: none;
-    outline: none;
-    padding: 16px 0px;
-    border-bottom: 1px solid white;
-
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid white;
 }
 
 .bgMonstro {
-    background-image: url("assets/bg-sec2.webp");
-    background-size: cover;
-    /* background-position: center; */
-    background-position: 50% 0%;
-    position: relative;
-    z-index: 2;
-    background-color: #0C0102;
+  background-image: url("assets/bg-sec2.webp");
+  background-size: cover;
+  /* background-position: center; */
+  background-position: 50% 0%;
+  position: relative;
+  z-index: 2;
+  background-color: #0c0102;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
-
 
 .hero {
-    /* background-image: url("assets/hero.webp"); */
-    background-position: 50% 0%;
-    background-size: cover;
-    /*view height*/
-    height: 100vh;
-    /*posiciona vertical*/
-    align-items: center;
-    /*posiciona horizontal*/
-    justify-content: space-between;
-    padding: 0 7vw 7vw 7vw;
-    /* Se torna referência para as divs filhas */
-    position: relative;
+  /* background-image: url("assets/hero.webp"); */
+  background-position: 50% 0%;
+  background-size: cover;
+  /*view height*/
+  height: 100vh;
+  /*posiciona vertical*/
+  align-items: center;
+  /*posiciona horizontal*/
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  /* Se torna referência para as divs filhas */
+  position: relative;
 
-    picture {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        top: 0;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-        }
-    }
-
-    .esquerda,
-    .direita {
-        width: 30%;
-        z-index: 3;
-    }
-
-    .esquerda {
-        /* background-color: blue; */
-
-        h3 {
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: 4px;
-        }
-
-        h1 {
-            font-size: 3.7vw;
-            font-family: "Benguiat";
-        }
-
-    }
-
-    .direita {
-
-        /* background-color: blue; */
-
-        display: flex;
-        /*Um elemento fica ao lado do outro*/
-        flex-direction: column;
-        /*Elementos um abaixo do outro*/
-        align-items: end;
-
-        p {
-            font-size: 2vw;
-            margin-bottom: 32px;
-            text-align: end;
-        }
-
-    }
-
-}
-
-.hero:before {
-    content: "";
-    background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
-    /* background-color: blue; */
+  picture {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     left: 0;
     top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
+
+  .esquerda,
+  .direita {
+    width: 30%;
+    z-index: 3;
+  }
+
+  .esquerda {
+    /* background-color: blue; */
+
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      font-size: 3.7vw;
+      font-family: "Benguiat";
+    }
+  }
+
+  .direita {
+    /* background-color: blue; */
+
+    display: flex;
+    /*Um elemento fica ao lado do outro*/
+    flex-direction: column;
+    /*Elementos um abaixo do outro*/
+    align-items: end;
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 32px;
+      text-align: end;
+    }
+  }
+}
+
+/* Simula a criação de uma div acima da camada de hero */
+.hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  /* background-color: blue; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
 }
 
 .secaoCidade {
-    flex-direction: column;
-    position: relative;
+  flex-direction: column;
+  position: relative;
 
-    .titulo {
-        /* background-color: blue; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .titulo {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    h2 {
-        font-size: 40px;
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .cards {
+    /* background-color: blue; */
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      /* background-color: blue; */
+      background-image: url(assets/card1.webp);
+      width: 32%;
+      aspect-ratio: 16/9;
+      /*definindo o tamanho da largura p/ responsividade*/
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      padding: 14px;
+
+      h3,
+      p {
         font-weight: 500;
+        font-size: 1.1vw;
+      }
     }
 
-    .cards {
-        /* background-color: blue; */
-        margin-top: 52px;
-        display: flex;
-        justify-content: space-between;
-
-        .card {
-            /* background-color: blue; */
-            background-image: url(assets/card1.webp);
-            width: 32%;
-            aspect-ratio: 16/9;
-            /*definindo o tamanho da largura p/ responsividade*/
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: end;
-            justify-content: space-between;
-            padding: 14px;
-
-            h3,
-            p {
-                font-weight: 500;
-                font-size: 1.1vw;
-            }
-
-        }
-
-        .card:nth-child(2) {
-            background-image: url(assets/card2.webp);
-        }
-
-        .card:nth-child(3) {
-            background-image: url(assets/card3.webp);
-        }
+    .card:nth-child(2) {
+      background-image: url(assets/card2.webp);
     }
 
+    .card:nth-child(3) {
+      background-image: url(assets/card3.webp);
+    }
+  }
 }
 
 .secaoDepoimentos {
-    flex-direction: column;
+  flex-direction: column;
 
-    .logotipos {
-        /* background-color: blue; */
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
+  .logotipos {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .depoimentos {
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+
+    .depoimento {
+      width: 31%;
     }
-
-    .depoimentos {
-        margin-top: 62px;
-        display: flex;
-        justify-content: space-between;
-
-        .depoimento {
-            width: 31%;
-        }
-    }
+  }
 }
 
 .secaoObrigado {
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #0c0102;
+  z-index: 2;
 
-    ul {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 footer {
-    width: 100%;
-    /* height: 100vh; */
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("assets/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+  /* background-position: 50% 0%; */
+
+  .conteudoFooter {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("assets/bg-footer.webp");
-    background-size: cover;
-    background-position: center;
-    /* background-position: 50% 0%; */
+    width: 100%;
+    padding: 7vw;
 
+    .logoFooter {
+      width: 30%;
 
-    .conteudoFooter {
-        display: flex;
-        width: 100%;
-        padding: 7vw;
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+      }
 
-        .logoFooter {
-            width: 30%;
-
-            h3 {
-                font-size: 24px;
-                font-weight: 500;
-                letter-spacing: 4px;
-            }
-
-            h2 {
-                font-size: 3.7vw;
-                font-family: "Benguiat";
-            }
-        }
-
-        .secoesFooter {
-            display: flex;
-            /* background-color: blue; */
-            /* Pega a largura total disponível */
-            flex: 1;
-            justify-content: end;
-            gap: 6%;
-            align-items: end;
-
-            h3 {
-                font-size: 18px;
-                font-weight: 500;
-                margin-bottom: 12px;
-            }
-
-            .social {
-
-                ul {
-                    display: flex;
-                    gap: 12px;
-                }
-            }
-
-        }
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat";
+      }
     }
 
-    .logotiposFooter {
-        width: 100%;
-        /* background-color: blue; */
-        display: flex;
-        justify-content: space-between;
-        padding: 0 4vw;
-    }
+    .secoesFooter {
+      display: flex;
+      /* background-color: blue; */
+      /* Pega a largura total disponível */
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+      align-items: end;
 
-    .textoInfinito {
-        width: max-content;
-        display: flex;
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
 
-        h3 {
-            color: rgb(189, 188, 188);
-            font-size: 12vw;
-            font-family: "Benguiat", sans-serif;
-            mix-blend-mode: color-dodge;
-            animation: textoInfinito 11s infinite linear;
-            padding-left: 8vw;
+      .social {
+        ul {
+          display: flex;
+          gap: 12px;
         }
+      }
     }
+  }
 
+  .logotiposFooter {
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .textoInfinito {
+    width: max-content;
+    display: flex;
+
+    h3 {
+      color: rgb(189, 188, 188);
+      font-size: 12vw;
+      font-family: "Benguiat", sans-serif;
+      mix-blend-mode: color-dodge;
+      animation: textoInfinito 11s infinite linear;
+      padding-left: 8vw;
+    }
+  }
 }
 
 @keyframes textoInfinito {
-
-    100% {
-        transform: translateX(-100%);
-    }
-
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* MEDIA QUERIES */
 
 @media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 12% 4vw 0;
 
-    .hero {
-
-        flex-direction: column;
-        padding: 10% 4vw 0;
-
-        .esquerda,
-        .direita {
-            width: 100%;
-        }
-
-        .esquerda {
-
-            h3,
-            h1 {
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 8vw;
-            }
-            
-            h3{
-                font-size: 4vw;
-                
-            }
-        }
-
-        .direita {
-            align-items: start;
-
-            p {
-                font-size: 4vw;
-                text-align: start;
-                margin-bottom: 16px;
-            }
-        }
-
+    .esquerda,
+    .direita {
+      width: 100%;
     }
 
-    .secaoCidade {
-        button {
-            display: none;
-        }
+    .esquerda {
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 8vw;
+      }
+
+      h3 {
+        font-size: 4vw;
+      }
     }
 
-    .secaoCidade .cards .card {
-        /* display: none; */
-        flex-direction: column;
-        align-items: start;
-        justify-content: end;
+    .direita {
+      align-items: start;
+
+      p {
+        font-size: 4vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
     }
+  }
 
-    .secaoCidade {
-        margin-top: 80px;
+  .hero:before{
+    top: unset;
+  }
 
-        button {
-            display: none;
-        }
+  .secaoCidade .cards .card {
+    /* display: none; */
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
 
-        h2 {
-            font-size: 6vw;
-        }
-
-        .cards {
-            margin-top: 20px;
-            flex-direction: column;
-            gap: 20px;
-
-            .card {
-                width: 100%;
-
-                h3,
-                p {
-                    font-weight: 500;
-                    font-size: 3vw;
-                }
-            }
-        }
-    }
-
-    .secaoObrigado {
-
-        /* superior, laterais, inferior */
-        margin: 40px 0px 60px;
-
-        h2 {
-            text-align: center;
-        }
-
-        ul {
-            width: max-content;
-            gap: 28px;
-            animation: textoCidades 16s infinite linear;
-        }
-
-
-    }
-
-    footer {
-
-        padding-top: 40px;
-
-        .conteudoFooter {
-
-            padding: 4vw;
-            flex-direction: column;
-
-            .logoFooter {
-                width: 100%;
-
-                h2,
-                h3 {
-                    text-align: center;
-                }
-
-                h2 {
-                    font-size: 6vw;
-                }
-            }
-
-            .secoesFooter {
-
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: start;
-
-                .social {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    margin: 40px 0px 32px;
-
-                    ul {
-                        gap: 8vw;
-                    }
-                }
-
-                .institucional,
-                .parceiro {
-                    width: 40%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-
-                }
-
-                .parceiro {
-                    img {
-                        width: 50%;
-                    }
-                }
-            }
-        }
-
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    section {
-        padding: 4vw;
+  .secaoCidade {
+    margin-top: 80px;
+    button {
+      display: none;
     }
 
     h2 {
-        font-size: 6vw;
+      font-size: 6vw;
     }
 
-    header h2 {
-        font-size: 28px;
+    .cards {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+
+        h3,
+        p {
+          font-weight: 500;
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+
+  .secaoObrigado {
+    /* superior, laterais, inferior */
+    margin: 40px 0px 60px;
+
+    h2 {
+      text-align: center;
     }
 
-    .hero {
+    ul {
+      width: max-content;
+      gap: 28px;
+      animation: textoCidades 16s infinite linear;
+    }
+  }
 
-        flex-direction: column;
-        padding: 26% 4vw 0;
+  footer {
+    padding-top: 40px;
 
-        .esquerda,
-        .direita {
+    .conteudoFooter {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 6vw;
+        }
+      }
+
+      .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .social {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+
+          ul {
+            gap: 8vw;
+          }
+        }
+
+        .institucional,
+        .parceiro {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .parceiro {
+          img {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 4vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  header h2 {
+    font-size: 28px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 26% 4vw 0;
+    height: auto;
+    min-height: 100vh; /* opcional */
+
+    .esquerda,
+    .direita {
+      width: 100%;
+    }
+
+    .esquerda {
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 12vw;
+      }
+    }
+
+    .direita {
+      align-items: start;
+      gap: 20px;
+      width: 100%;
+      min-width: auto;
+
+      p {
+        font-size: 5.5vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .secaoCidade {
+    margin-top: 80px;
+
+    button {
+      display: none;
+    }
+
+    h2 {
+      font-size: 6vw;
+    }
+
+    .cards {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+
+        h3,
+        p {
+          font-weight: 500;
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+
+  .secaoDepoimentos {
+    .logotipos {
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+
+      img:nth-child(2) {
+        width: 40%;
+      }
+    }
+
+    .depoimentos {
+      flex-direction: column;
+      gap: 48px;
+
+      .depoimento {
+        width: 100%;
+      }
+    }
+  }
+
+  .secaoObrigado {
+    /* superior, laterais, inferior */
+    margin: 40px 0px 60px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      width: max-content;
+      gap: 28px;
+      animation: textoCidades 16s infinite linear;
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+
+    .conteudoFooter {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logoFooter {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 12vw;
+        }
+      }
+
+      .secoesFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .social {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+
+          ul {
+            gap: 8vw;
+          }
+        }
+
+        .institucional {
+          width: 40%;
+        }
+
+        .parceiro {
+          /* background-color: blue; */
+          width: 50%;
+
+          img {
             width: 100%;
+          }
         }
-
-        .esquerda {
-
-            h3,
-            h1 {
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 12vw;
-            }
-        }
-
-        .direita {
-            align-items: start;
-
-            p {
-                font-size: 5.5vw;
-                text-align: start;
-                margin-bottom: 16px;
-            }
-        }
-
+      }
     }
 
-    .secaoCidade {
-        margin-top: 80px;
-
-        button {
-            display: none;
-        }
-
-        h2 {
-            font-size: 6vw;
-        }
-
-        .cards {
-            margin-top: 20px;
-            flex-direction: column;
-            gap: 20px;
-
-            .card {
-                width: 100%;
-
-                h3,
-                p {
-                    font-weight: 500;
-                    font-size: 4vw;
-                }
-            }
-        }
+    .logotiposFooter {
+      margin-top: 40px;
     }
 
-    .secaoDepoimentos {
-        .logotipos {
-
-            img:nth-child(1),
-            img:nth-child(3) {
-                width: 20%;
-            }
-
-            img:nth-child(2) {
-                width: 40%;
-            }
-        }
-
-        .depoimentos {
-            flex-direction: column;
-            gap: 48px;
-
-            .depoimento {
-                width: 100%;
-            }
-        }
-
+    .textoInfinito h3 {
+      font-size: 20vw;
     }
-
-    .secaoObrigado {
-
-        /* superior, laterais, inferior */
-        margin: 40px 0px 60px;
-
-        h2 {
-            text-align: center;
-        }
-
-        ul {
-            width: max-content;
-            gap: 28px;
-            animation: textoCidades 16s infinite linear;
-        }
-
-
-    }
-
-    footer {
-
-        padding-top: 40px;
-
-        .conteudoFooter {
-
-            padding: 4vw;
-            flex-direction: column;
-
-            .logoFooter {
-                width: 100%;
-
-                h2,
-                h3 {
-                    text-align: center;
-                }
-
-                h2 {
-                    font-size: 12vw;
-                }
-            }
-
-            .secoesFooter {
-
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: start;
-
-                .social {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    margin: 40px 0px 32px;
-
-                    ul {
-                        gap: 8vw;
-                    }
-                }
-
-                .institucional {
-                    width: 40%;
-                }
-
-                .parceiro {
-                    /* background-color: blue; */
-                    width: 50%;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        .logotiposFooter {
-            margin-top: 40px;
-        }
-
-        .textoInfinito h3 {
-            font-size: 20vw;
-        }
-
-    }
+  }
 }
 
 @keyframes textoCidades {
-
-    100% {
-        transform: translateX(-100%);
-    }
-
+  100% {
+    transform: translateX(-100%);
+  }
 }
