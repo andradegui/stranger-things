@@ -6,24 +6,24 @@ ScrollSmoother.create({
 });
 
 // ANIMAÇÕES HERO
-
 gsap.from(".hero", {
     opacity: 0,
     duration: 1
 });
 
+// ANIMAÇÕES HERO
 gsap.from("picture:nth-child(1)", {
     y: -60,
     duration: 1
 });
 
+// ANIMAÇÕES HERO
 gsap.from("picture:nth-child(2)", {
     y: 60,
     duration: 1
 });
 
 // ANIMAÇÕES CIDADE
-
 gsap.from(".card", {
     opacity: 0,
     // duration: 1,
@@ -55,6 +55,7 @@ gsap.from(".secaoObrigado ul li", {
 
 });
 
+// ANIMAÇÕES FOOTER
 gsap.from("footer", {
     y: "-30%",
     // Renderiza a página sem jogar o posicionamento acima
@@ -69,6 +70,52 @@ gsap.from("footer", {
     }
 });
 
+// ANIMAÇÕES LETRAS
+
+// Seleciono todos os elementos da pagina que tem a classe textoSplit
+const grupoTextoSplit = document.querySelectorAll(".textoSplit");
+
+grupoTextoSplit.forEach(textoUnicoSplit => {
+
+    // Divido por div palavras e cada letra
+    const split = SplitText.create(textoUnicoSplit, {
+        type: "lines, words, chars",
+        mask: "lines"
+    })
+    
+    gsap.from(split.chars, {
+        y: 40,
+        opacity: 0,
+        duration: .3,
+        stagger: .03,
+        scrollTrigger: {
+            trigger: textoUnicoSplit,
+        },
+    });
+
+});
+
+// ANIMAÇÕES PRELOADER
+
+const tl = gsap.timeline({
+    onComplete(){
+        gsap.to("#preloader", {
+            opacity: 0,
+            display: "none"
+        })
+    }
+});
+
+tl.to("#preloader path", {
+    duration: 1.5,
+    strokeDashoffset: 0
+});
+
+tl.to("#preloader path", {
+    fill: rgb(168, 19, 19),
+    duration: 1,
+    strokeDashoffset: 0
+});
 
 
 

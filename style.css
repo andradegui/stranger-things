@@ -59,6 +59,30 @@ button {
   border-bottom: 1px solid white;
 }
 
+#preloader{
+  width: 100%;
+  height: 100vh;
+  background-color: #0c0102;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg{
+    width: 40vw;
+    height: auto;
+
+    path{
+      fill: rgba(355, 19, 19, 0.564);
+      stroke: rgb(355, 19, 19);
+      stroke-dasharray: 2040;
+      stroke-dashoffset: 2040;
+    }
+
+  }
+
+}
+
 .bgMonstro {
   background-image: url("assets/bg-sec2.webp");
   background-size: cover;
